@@ -1,0 +1,1 @@
+GET http://localhost:8081/api/products/paginatedProduct?page=1&limit=8
