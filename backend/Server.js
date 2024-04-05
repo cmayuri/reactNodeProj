@@ -1,41 +1,41 @@
-const express = require("express");
-const cors = require("cors");
+// const express = require("express");
+// const cors = require("cors");
 
-const app = express();
+// const app = express();
 
-var corOption = {
-  origin: "https://localhost:8081",
-};
+// var corOption = {
+//   origin: "https://localhost:8081",
+// };
 
-//midleware
+// //midleware
 
-app.use(cors(corOption));
+// app.use(cors(corOption));
 
-app.use(express.json());
+// app.use(express.json());
 
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
 
-// router
-const router = require("./Routes/ProductsRoutes.js");
-app.use("/api/products", router);
+// // router
+// const router = require("./Routes/ProductsRoutes.js");
+// app.use("/api/products", router);
 
-const catRouter = require("./Routes/CategoryRoutes.js");
-app.use("/api/category", catRouter);
-//testing api
-app.get("/", (req, res) => {
-  res.json({ message: "hello friends how are you...." });
-});
+// const catRouter = require("./Routes/CategoryRoutes.js");
+// app.use("/api/category", catRouter);
+// //testing api
+// app.get("/", (req, res) => {
+//   res.json({ message: "hello friends how are you...." });
+// });
 
-// api for paggination
+// // api for paggination
 
-app.get("/paginatedUser", async (req, res) => {
-  res.json("paginated");
-});
+// app.get("/paginatedUser", async (req, res) => {
+//   res.json("paginated");
+// });
 
-const PORT = process.env.PORT || 8081;
+// const PORT = process.env.PORT || 8081;
 
-//server
+// //server
 
-app.listen(PORT, () => {
-  console.log(`server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`server is running on port ${PORT}`);
+// });
