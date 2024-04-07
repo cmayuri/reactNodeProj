@@ -1,10 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
 
 var corOption = {
-  origin: "https://localhost:8081",
+  origin: "https://localhost:8080",
 };
 
 //midleware
@@ -32,7 +33,7 @@ app.get("/paginatedUser", async (req, res) => {
   res.json("paginated");
 });
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 8080;
 
 //server
 
